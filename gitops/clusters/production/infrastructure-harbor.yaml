@@ -15,8 +15,8 @@ spec:
   path: ./gitops/infrastructure/harbor
   postBuild:
     substitute:
-      registryHost: "{registryHost}"
-      externalUrl: "{registryUrl}"
+      registryHost: "srhack4lb.eastus2.cloudapp.azure.com"
+      externalUrl: "https://srhack4lb.eastus2.cloudapp.azure.com"
   prune: true
   validation: client
   healthChecks:
