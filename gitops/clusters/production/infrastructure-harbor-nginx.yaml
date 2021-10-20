@@ -15,7 +15,7 @@ spec:
   validation: client
   postBuild:
     substitute:
-      registryHostDnsLabel : "srhack6lbnew"  
+      registryHostDnsLabel : "srhack7lb"  
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v1beta1
       kind: HelmRelease

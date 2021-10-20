@@ -14,9 +14,9 @@ spec:
   path: ./gitops/app/devops
   postBuild:
     substitute:
-      cicdWebhookHost : "srhack4app.eastus2.cloudapp.azure.com"
-      registryHost: "srhack4lb.eastus2.cloudapp.azure.com"
-      appHostName: "srhack4app.eastus2.cloudapp.azure.com"
+      cicdWebhookHost : "srhack7app.eastus2.cloudapp.azure.com"
+      registryHost: "srhack7lb.eastus2.cloudapp.azure.com"
+      appHostName: "srhack7app.eastus2.cloudapp.azure.com"
       sendGridApiKey: "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"  
   prune: true
   validation: client

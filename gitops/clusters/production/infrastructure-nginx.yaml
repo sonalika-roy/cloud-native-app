@@ -15,7 +15,7 @@ spec:
   validation: client
   postBuild:
     substitute:
-      appHostDnsLabel : "srhack6app"  
+      appHostDnsLabel : "srhack7app"  
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v1beta1
       kind: HelmRelease
