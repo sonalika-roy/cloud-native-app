@@ -44,13 +44,13 @@ sudo sed -i "s/{appHostDnsLabel}/$appHostDnsLabel/g" /cloud-native-app/gitops/cl
 
 cd gitops/app/core
 
-sudo kubectl create secret docker-registry regcred \
+sudo sh -c "kubectl create secret docker-registry regcred \
 	--docker-server="https://$registryHost" --docker-username=conexp  --docker-password=FTA@CNCF0n@zure3  --docker-email=user@mycompany.com -n conexp-mvp -oyaml --dry-run=client \
-	> regcred-conexp.yaml
+	> regcred-conexp.yaml"
 
-sudo kubectl create secret docker-registry regcred \
+sudo sh -c "kubectl create secret docker-registry regcred \
 	--docker-server="https://$registryHost" --docker-username=conexp  --docker-password=FTA@CNCF0n@zure3  --docker-email=user@mycompany.com -n openfaas-fn -oyaml --dry-run=client \
-	> regcred-openfaas.yaml
+	> regcred-openfaas.yaml"
 
 cd ../../..
 
