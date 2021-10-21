@@ -15,10 +15,10 @@ sudo step certificate create identity.linkerd.cluster.local issuer.crt issuer.ke
 	--ca ca.crt --ca-key ca.key --profile intermediate-ca --not-after 8760h --no-password --insecure \
 	--san identity.linkerd.cluster.local
 
-sudo kubectl -n linkerd create secret generic certs \
+sudo sh -c "kubectl -n linkerd create secret generic certs \
 	--from-file=ca.crt --from-file=issuer.crt \
 	--from-file=issuer.key -oyaml --dry-run=client \
-	> certs.yaml
+	> certs.yaml"
 
 cd ../../..
 
